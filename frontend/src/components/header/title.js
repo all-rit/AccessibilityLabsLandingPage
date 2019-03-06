@@ -10,7 +10,7 @@ const Title = () => {
         <span className='bold'>E</span>ducation
       </p>
       <p className='subTitle'>
-        Eperimental Laboratories for Computing Accessibility Education
+        Experimental Laboratories for Computing Accessibility Education
       </p>
     </div>
   );
