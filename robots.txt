@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /css
+Disallow: /js
+Disallow: /mail
+Disallow: /node_modules
+Disallow: /scss
+Disallow: /vendor
