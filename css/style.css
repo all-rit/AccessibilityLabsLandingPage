@@ -1,3 +1,13 @@
+header.masthead {
+  text-align: center;
+  color: white;
+  background-image: url("../img/new-header.jpg") !important;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+
 a {
   color: #0144d5;
 }
@@ -76,4 +86,20 @@ header.masthead {
   text-align: left;
   padding: 20px 40px;
   float: right;
+}
+.col-md-5 {
+  text-align: left;
+  padding: 20px 0px;
+  float: right;
+  margin: 0;
+}
+
+.vertical-line{
+  border-left: 1px solid #868e96;
+  height: 150px;
+  left: .5%;
+}
+.lab-section-subheading{
+  padding-bottom: 5px;
+  margin-bottom: 40px !important;
 }
