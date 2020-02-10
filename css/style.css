@@ -2,6 +2,7 @@ header.masthead {
   text-align: center;
   color: white;
   background-image: url("../img/new-header.jpg") !important;
+  /**Image=  https://unsplash.com/photos/2FPjlAyMQTA*/
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -89,13 +90,6 @@ header.masthead {
   padding: 20px 40px;
   float: right;
 }
-.col-md-5 {
-  text-align: left;
-  padding: 20px 0px;
-  float: right;
-  margin: 0;
-}
-
 .vertical-line{
   border-left: 1px solid #868e96;
   height: 150px;
@@ -104,4 +98,11 @@ header.masthead {
 .lab-section-subheading{
   padding-bottom: 5px;
   margin-bottom: 40px !important;
+}
+.thumbnail{
+  height: 250px;
+}
+.service-heading{
+  font-weight: 700;
+  font-size: 20px;
 }
