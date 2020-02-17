@@ -28,7 +28,7 @@ a.icon:hover {
 
 .btn-primary {
   background-color: #fed136;
-  border-color: #fed136;
+  border-color: #800080;
   color: #404040 !important;
 }
 
@@ -81,7 +81,7 @@ header.masthead {
   background-color: black;
 }
 .navbar-toggler {
-  background-color: #fed136;
+  background-color: #800080;
   border-color: #fed136;
   color: #404040 !important;
 }
