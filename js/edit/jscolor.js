@@ -22,6 +22,7 @@ var jsc = {
 
 	register : function () {
 		jsc.attachDOMReadyEvent(jsc.init);
+		jsc.attachEvent(document, 'click', jsc.onDocumentEnter);
 		jsc.attachEvent(document, 'mousedown', jsc.onDocumentMouseDown);
 		jsc.attachEvent(document, 'touchstart', jsc.onDocumentTouchStart);
 		jsc.attachEvent(window, 'resize', jsc.onWindowResize);
@@ -542,7 +543,16 @@ var jsc = {
 			}
 		}
 	},
+	onDocumentEnter : function (e) {
+		if (!e) { e = window.event; }
+		var target = e.target || e.srcElement;
 
+		if (target._jscLinkedInstance) {
+			if (target._jscLinkedInstance.showOnClick) {
+				target._jscLinkedInstance.show();
+			}
+		}
+	},
 
 	onDocumentTouchStart : function (e) {
 		if (!e) { e = window.event; }
@@ -855,7 +865,7 @@ var jsc = {
 					break;
 				}
 			};
-			
+
 			paletteObj.elm = vmlContainer;
 			paletteObj.draw = drawFunc;
 		}
@@ -926,7 +936,7 @@ var jsc = {
 				grad.color = color1;
 				grad.color2 = color2;
 			};
-			
+
 			sliderObj.elm = vmlContainer;
 			sliderObj.draw = drawFunc;
 		}
