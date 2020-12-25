@@ -18,6 +18,8 @@ function changeTSize(num) {
   //h4 loop through all h4 elements
   els = document.getElementsByTagName("h4");
   changeFontSize(els, num);
+
+
 }
 
 /**
@@ -40,6 +42,12 @@ function changeFontSize(elements, num){
 function setTextColor(picker) {
   document.getElementsByTagName("body")[0].style.color =
     "#" + picker.toString();
+
+  //also change the color of the hyperlinks
+  let els = document.getElementsByTagName("a");
+  for (let i=0; i < els.length; i++){
+    els[i].style.color = "#" + picker.toString();
+  }
 }
 
 function setBackgroundColor(picker) {
