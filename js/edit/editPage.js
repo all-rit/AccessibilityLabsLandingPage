@@ -40,13 +40,9 @@ function changeFontSize(elements, num){
 }
 
 function setTextColor(picker) {
-  document.getElementsByTagName("body")[0].style.color =
-    "#" + picker.toString();
-
-  //also change the color of the hyperlinks
-  let els = document.getElementsByTagName("a");
-  for (let i=0; i < els.length; i++){
-    els[i].style.color = "#" + picker.toString();
+  var bodyElements = document.querySelectorAll("body *, a");
+  for (var i = 0; i < bodyElements.length; i++) {
+    bodyElements[i].style.color = "#" + picker.toString();
   }
 }
 
