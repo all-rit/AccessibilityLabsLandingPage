@@ -40,8 +40,8 @@ function changeFontSize(elements, num){
 }
 
 function setTextColor(picker) {
-  var bodyElements = document.querySelectorAll("body *, a");
-  for (var i = 0; i < bodyElements.length; i++) {
+  let bodyElements = document.querySelectorAll("body *, a");
+  for (let i = 0; i < bodyElements.length; i++) {
     bodyElements[i].style.color = "#" + picker.toString();
   }
 }
