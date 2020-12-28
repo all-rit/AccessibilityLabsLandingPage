@@ -25,6 +25,10 @@ a.icon:hover {
   color: #fed136 !important;
 }
 
+#connect-text {
+  color: #fed136
+}
+
 .btn-primary {
   background-color: #fed136;
   border-color: #fed135;
