@@ -1,46 +1,49 @@
 function changeTSize(num) {
-  var el = document.getElementsByTagName("body")[0];
   // only one body in document
-  var fontSizeString = window
-    .getComputedStyle(el, null)
-    .getPropertyValue("font-size", "important");
-  var fontSize = parseFloat(fontSizeString);
-  el.style.fontSize = fontSize + num + "px";
+  let els = document.getElementsByTagName("body");
+  changeFontSize(els, num);
+
   // Must be done separately for buttons:
-  var els = document.getElementsByTagName("button");
-  for (var i = 0; i < els.length; i++) {
+  els = document.getElementsByTagName("button");
+  changeFontSize(els, num);
+
+  //h2 loop through all h2 elements
+  els = document.getElementsByTagName("h2");
+  changeFontSize(els, num);
+
+  //h3 loop through all the h3 elements
+  els = document.getElementsByTagName("h3");
+  changeFontSize(els, num);
+
+  //h4 loop through all h4 elements
+  els = document.getElementsByTagName("h4");
+  changeFontSize(els, num);
+
+
+}
+
+/**
+ * Take in a collection of elements and change the font size.
+ * @param elements the collection of elements to be changed
+ * @param num the specified size
+ */
+function changeFontSize(elements, num){
+  let fontSize;
+  let fontSizeString;
+  for (let i = 0; i < elements.length; i++) {
     fontSizeString = window
-      .getComputedStyle(els[i], null)
-      .getPropertyValue("font-size", "important");
-    var fontSize = parseFloat(fontSizeString);
-    els[i].style.fontSize = fontSize + num + "px";
-    //h2 tag
-    var el = document.getElementsByTagName("h2")[0];
-    var fontSizeString = window
-      .getComputedStyle(el, null)
-      .getPropertyValue("font-size", "important");
-    var fontSize = parseFloat(fontSizeString);
-    el.style.fontSize = fontSize + num + "px";
-    //h3
-    var el = document.getElementsByTagName("h3")[0];
-    var fontSizeString = window
-      .getComputedStyle(el, null)
-      .getPropertyValue("font-size", "important");
-    var fontSize = parseFloat(fontSizeString);
-    el.style.fontSize = fontSize + num + "px";
-    //h4
-    var el = document.getElementsByTagName("h4")[0];
-    var fontSizeString = window
-      .getComputedStyle(el, null)
-      .getPropertyValue("font-size", "important");
-    var fontSize = parseFloat(fontSizeString);
-    el.style.fontSize = fontSize + num + "px";
+        .getComputedStyle(elements[i], null)
+        .getPropertyValue("font-size");
+    fontSize = parseFloat(fontSizeString);
+    elements[i].style.fontSize = fontSize + num + "px";
   }
 }
 
 function setTextColor(picker) {
-  document.getElementsByTagName("body")[0].style.color =
-    "#" + picker.toString();
+  var bodyElements = document.querySelectorAll("body *, a");
+  for (var i = 0; i < bodyElements.length; i++) {
+    bodyElements[i].style.color = "#" + picker.toString();
+  }
 }
 
 function setBackgroundColor(picker) {
