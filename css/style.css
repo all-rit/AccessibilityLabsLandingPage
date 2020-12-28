@@ -32,7 +32,7 @@ a.icon:hover {
 .btn-primary {
   background-color: #fed136;
   border-color: #fed135;
-  color: #404040 !important;
+  color: #404040;
 }
 
 .btn-primary:active,
@@ -40,7 +40,7 @@ a.icon:hover {
 .btn-primary:hover {
   background-color: #e9b301 !important;
   border-color: white !important;
-  color: #262626 !important;
+  color: #262626;
 }
 
 #mainNav.navbar-shrink {
